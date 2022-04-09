@@ -1,0 +1,59 @@
+.pathbar {
+    display: flex;
+
+    font-family: "VT323", monospace;
+    font-size: 24px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow: hidden;
+
+    width: 100%;
+    height: 45px;
+    background-color: #000;
+    color: #FFF;
+
+    align-items: center;
+    justify-content: left;
+    padding-left: 20px;
+    padding-right: 8px;
+}
+
+.path {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    direction: rtl;
+    margin-right: 6px;
+}
+
+.text-cursor {
+    width: 14px;
+    height: 26px;
+    background-color: #FFF;
+    margin: 5px;
+}
+
+.text-cursor-anim {
+    animation-name: cursor-anim;
+    animation-duration: 1s;
+    animation-timing-function: steps(2);
+    animation-iteration-count: infinite;
+}
+
+// Animations
+@keyframes cursor-anim {
+    0% {
+        opacity: 1;
+    }
+
+    49% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
