@@ -2,120 +2,112 @@ import { Component, ReactNode } from "react"
 import styles from "../../styles/navbar/Navbar.module.scss"
 
 type PathBarState = {
-    displayPath: string
+    path: string
 }
 
 export default class PathBar extends Component {
 
     state: PathBarState = {
-        displayPath: "C:/users/felipe/desktop/random/portfolio/pages/home.html"
+        path: "C:/users/felipe/desktop/random/portfolio/pages/home.html"
     }
 
-    public changePath(newPath: string) {
-        const commonStr = (str1: string, str2: string) => {
-            const str1Chars = str1.split("")
-            const str2Chars = str2.split("")
-            let diffIndex = -1
+    async changePath(newPath: string) {
+        const oldPath = this.state.path
 
-            for (let i = 0; i < str1.length; i++) {
-                if (diffIndex == -1 && str1Chars.at(i) !== str2Chars.at(i)) {
-                    diffIndex = i
-                }
-            }
+        const commonString = this.commonStr(oldPath, newPath)
+        if (commonString == null) return
+        
+        const amountToDelete = oldPath.length - commonString.length
+        const addChars = this.diffStr(oldPath, newPath)?.split("")
+        
+        if (amountToDelete == null || addChars == null) return
+        
+        if (amountToDelete > 0) await this.deleteChars(amountToDelete)
+        if (addChars.length > 0) await this.addChars(addChars)
+    }
 
-            const str = diffIndex == -1 ? str1 : str1.substring(0, diffIndex)
-            return str
+    private deleteChars(amount: number, delay = 100): Promise<void> {
+        const removeChar = () => {
+            const path = this.state.path
+            this.setState({ path: path.substring(0, path.length - 1) })
         }
-        const diffStr = (str1: string, str2: string) => {
-            const str1Chars = str1.split("")
-            const str2Chars = str2.split("")
-            let diffIndex = -1
 
-            for (let i = 0; i < str1.length; i++) {
-                if (diffIndex == -1 && str1Chars.at(i) !== str2Chars.at(i)) {
-                    diffIndex = i
-                }
-            }
-
-            const str = diffIndex == -1 ? null : str1.substring(diffIndex)
-            return str
-        }
-        const previousPath = this.state.displayPath
-
-        if (previousPath === newPath) return // Validation
-        if (commonStr(previousPath, newPath).length == previousPath.length) { // Only need is chars to be added
-            const newChars = newPath.substring(commonStr(previousPath, newPath).length, newPath.length).split("")
+        amount = parseInt(`${amount}`)
+        return new Promise((res, rej) => {
+            if (amount < 1) rej("Value needs to be greater than 0")
 
             let i = 0
             const interval = setInterval(() => {
-                if (i == newChars.length) {
+                if (i == amount) {
+                    res()
                     clearInterval(interval)
                 } else {
-                    this.addChar(newChars[i])
+                    removeChar()
                     i++
                 }
-            }, 100)
-        } else {
-            const deleteChars = (amount: number, delay = 100) => {
-                return new Promise<void>((res, rej) => {
-                    if (amount <= 0) rej()
+            }, delay)
+        })
+    }
 
-                    let i = 0
-                    const interval = setInterval(() => {
-                        if (i == amount) {
-                            res()
-                            clearInterval(interval)
-                        } else {
-                            this.removeChar()
-                            i++
-                        }
-                    }, delay)
-                })
-            }
-            const addChars = (charArray: string[], delay = 100) => {
-                const array = charArray.map(e => e.charAt(0))
-                return new Promise<void>((res, rej) => {
-                    if (array.length == 0) rej()
-
-                    let i = 0
-                    const interval = setInterval(() => {
-                        if (i == array.length) {
-                            res()
-                            clearInterval(interval)
-                        } else {
-                            this.addChar(array[i])
-                            i++
-                        }
-                    }, delay)
-                })
-            }
-
-            const strToAdd = diffStr(newPath, previousPath)
-            if (strToAdd == null) return null
-            const amountToDelete = strToAdd.length - 1
-
-            deleteChars(amountToDelete)
-                .then(() => {
-                    addChars(strToAdd.split(""))
-                })
+    private addChars(chars: string | string[], delay = 100): Promise<void> {
+        const addChar = (char: string) => {
+            const path = this.state.path + char.charAt(0)
+            this.setState({ path: path })
         }
+
+        let charArray: string[] = []
+        if (typeof(chars) === "string") {
+            charArray = chars.split("")
+        } else {
+            charArray = chars.map(v => v.charAt(0))
+        }
+
+        return new Promise((res, rej) => {
+            const amount = charArray.length
+            if (amount < 1) rej("Value needs to be greater than 0")
+
+            let i = 0
+            const interval = setInterval(() => {
+                if (i == amount) {
+                    res()
+                    clearInterval(interval)
+                } else {
+                    addChar(charArray[i])
+                    i++
+                }
+            }, delay)
+        })
     }
 
-    private addChar(char: string) {
-        this.setState({ displayPath: this.state.displayPath + char.charAt(0) })
+    private diffStr(str1: string, str2: string) {
+        if (str1 === str2) return null
+
+        const commonStr = this.commonStr(str1, str2)
+        if (commonStr == null) return null
+
+        return str2.substring(commonStr.length)
     }
 
-    private removeChar() {
-        const path = this.state.displayPath
-        this.setState({ displayPath: path.substring(0, path.length - 1) })
+    private commonStr(str1: string, str2: string) {
+        if (str1 === str2) return null
+        const length = str1.length > str2.length ? str1.length : str2.length
+
+        let endIndex = -1
+        for (let i = 0; i < length; i++) {
+            if (endIndex == -1 && str1.charAt(i) !== str2.charAt(i)) {
+                endIndex = i
+            }
+        }
+
+        return str1.substring(0, endIndex)
     }
 
     render(): ReactNode {
         return (
             <div className={styles.pathbar}>
-                <span className={styles.path}>{this.state.displayPath}</span>
+                <span className={styles.path}>{this.state.path}</span>
                 <span className={`${styles["text-cursor"]} ${styles["text-cursor-anim"]}`}></span>
-                <button onClick={() => this.changePath("C:/users/felipe/desktop/random/portfolio/pages/was?")}>Teste</button>
+                <button onClick={() => this.changePath("C:/users/felipe/desktop/random/portfolio/pages/index.html")}>Teste</button>
             </div>
         )
     }
