@@ -20,14 +20,18 @@
 
 .path {
     overflow: hidden;
-    text-overflow: ellipsis;
-    direction: rtl;
     margin-right: 6px;
+    hanging-punctuation: allow-end;
+
+    text-overflow: ellipsis;
+    float: left;
 }
 
 .text-cursor {
     width: 14px;
+    min-width: 14px;
     height: 26px;
+
     background-color: #FFF;
     margin: 5px;
 }

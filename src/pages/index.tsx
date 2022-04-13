@@ -1,4 +1,4 @@
-import PathBar from "../components/navbar/PathBar";
+import PathBar from "../components/navbar/PathBar"
 
 export default function Home() {
     return (
