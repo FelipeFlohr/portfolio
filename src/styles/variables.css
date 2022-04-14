@@ -2,12 +2,14 @@
     /* Colors */
     --bg-dark: #262626;
     --bg-white: #FBFBFB;
+    --bg-item-color: #fce6bc;
     --text-dark: #262626;
     --text-white: #FFF;
 
     /* Dimensions */
     --pathbar-height: 45px;
     --aside-width: 225px;
+    --aside-width-md: 60px;
 
     /* Borders */
     --pathbar-border: 3px solid #FFF;

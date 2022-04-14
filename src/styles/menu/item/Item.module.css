@@ -1,0 +1,13 @@
+.item {
+    background-color: var(--bg-item-color);
+
+    display: flex;
+    width: calc(100% + 20px);
+    height: 40px;
+
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: var(--text-dark);
+}
