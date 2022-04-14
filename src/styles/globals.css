@@ -20,9 +20,9 @@ body {
     grid-template-areas:
         "pathbar pathbar"
         "menu content";
-    grid-template-columns: 225px 1fr;
+    grid-template-columns: var(--aside-width) 1fr;
     grid-template-rows:
-        45px
+        var(--pathbar-height)
         1fr;
     height: 100vh;
 }
@@ -36,5 +36,12 @@ body {
 }
 
 .content {
+    display: flex;
+
     grid-area: content;
+    padding-top: 30px;
+    padding-left: 20px;
+
+    color: var(--text-dark);
+    background-color: var(--bg-white);
 }

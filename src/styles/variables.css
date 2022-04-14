@@ -4,4 +4,14 @@
     --bg-white: #FBFBFB;
     --text-dark: #262626;
     --text-white: #FFF;
+
+    /* Dimensions */
+    --pathbar-height: 45px;
+    --aside-width: 225px;
+
+    /* Borders */
+    --pathbar-border: 3px solid #FFF;
+
+    /* Shadow */
+    --pathbar-shadow: 0px 10px 25px 10px rgba(0, 0, 0, 0.45);
 }

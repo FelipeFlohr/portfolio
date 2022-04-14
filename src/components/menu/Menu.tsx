@@ -4,7 +4,7 @@ export default function Menu() {
 
     return (
         <div className={`${styles.menu} menu`}>
-            All your pride
+            That's the Menu. Of course.
         </div>
     )
 }

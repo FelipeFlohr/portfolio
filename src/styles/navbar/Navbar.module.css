@@ -9,7 +9,9 @@
 
     background-color: var(--bg-dark);
     color: var(--text-white);
-    box-shadow: 0px 10px 25px 10px rgba(0, 0, 0, 0.45);
+    box-shadow: var(--pathbar-shadow);
+    z-index: 100;
+    border-bottom: var(--pathbar-border);
 
     align-items: center;
     justify-content: left;

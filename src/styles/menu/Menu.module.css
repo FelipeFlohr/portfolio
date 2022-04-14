@@ -1,4 +1,9 @@
 .menu {
+    display: inline-block;
+
     color: var(--text-white);
     background-color: var(--bg-dark);
+
+    padding-top: 25px;
+    z-index: 100;
 }
