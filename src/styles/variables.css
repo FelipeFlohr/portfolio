@@ -11,7 +11,9 @@
 
     /* Borders */
     --pathbar-border: 3px solid #FFF;
+    --aside-border: 3px solid #FFF;
 
     /* Shadow */
-    --pathbar-shadow: 0px 10px 25px 10px rgba(0, 0, 0, 0.45);
+    --pathbar-shadow: 0px 10px 25px 10px rgba(0, 0, 0, 0.35);
+    --aside-shadow: 10px 0px 25px 10px rgba(0,0,0,0.35);
 }

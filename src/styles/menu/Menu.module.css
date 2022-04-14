@@ -1,9 +1,12 @@
 .menu {
-    display: inline-block;
+    display: flex;
 
     color: var(--text-white);
     background-color: var(--bg-dark);
 
-    padding-top: 25px;
-    z-index: 100;
+    border-right: var(--aside-border);
+    box-shadow: var(--aside-shadow);
+
+    padding: 25px 10px 10px 10px;
+    z-index: 99;
 }

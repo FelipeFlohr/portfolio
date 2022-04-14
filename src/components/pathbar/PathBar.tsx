@@ -1,6 +1,6 @@
 import Router from "next/router"
 import { Component, ReactNode } from "react"
-import styles from "../../styles/navbar/Navbar.module.css"
+import styles from "../../styles/pathbar/Pathbar.module.css"
 
 type PathBarState = {
     path: string
