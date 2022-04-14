@@ -1,7 +1,6 @@
-import Link from "next/link"
 import Router from "next/router"
 import { Component, ReactNode } from "react"
-import styles from "../../styles/navbar/Navbar.module.scss"
+import styles from "../../styles/navbar/Navbar.module.css"
 
 type PathBarState = {
     path: string
@@ -24,7 +23,6 @@ export default class PathBar extends Component {
 
         setInterval(async () => {
             if (Router.route != currentLocation()) {
-                console.log("diferente")
                 const pathToShow = window.location.pathname.charAt(window.location.pathname.length - 1) === "/" ? "/index" : window.location.pathname
                 await this.changePath(`C:/users/felipe/desktop/cs/portfolio/pages${pathToShow}.html`)
             }
@@ -39,7 +37,6 @@ export default class PathBar extends Component {
         if (newPath.trim() == "") return
 
         if (!this.isChanging) {
-            console.log("chegou: " + newPath)
             const oldPath = this.state.path
 
             const commonString = this.commonStr(oldPath, newPath)
@@ -134,11 +131,9 @@ export default class PathBar extends Component {
 
     render(): ReactNode {
         return (
-            <div className={styles.pathbar}>
+            <div className={`${styles.pathbar} pathbar`}>
                 <span className={styles.path}>{this.state.path}</span>
                 <span className={`${styles["text-cursor"]} ${styles["text-cursor-anim"]}`}></span>
-                <button><Link href="/">Intro</Link></button>
-                <button><Link href="/legal">Legal</Link></button>
             </div>
         )
     }
