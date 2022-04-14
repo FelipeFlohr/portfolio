@@ -1,55 +1,65 @@
 import Link from "next/link"
-import { useEffect, useState } from "react"
+import Router from "next/router"
+import { Component, ReactNode } from "react"
 import styles from "../../styles/navbar/Navbar.module.scss"
 
-export default function PathBar() {
-    let changingTo: string | null = null
-    let changeQueue: string | null = null
+type PathBarState = {
+    path: string
+}
 
-    const [path, setPath] = useState("")
-    useEffect(() => {
-        let currentLocation = window.location.href
+export default class PathBar extends Component {
 
-        const observer = new MutationObserver(() => {
-            if (currentLocation !== document.location.href) {
-                changePath(`C:/users/felipe/desktop/cs/portfolio/pages${document.location.pathname}.html`)
+    private isChanging = false
+
+    state: PathBarState = { path: "" }
+
+    componentDidMount() {
+        let currentLocation = () => {
+            const pathnameShowing = this.state.path.substring(42)
+            const finalPathname = pathnameShowing
+                .replace("/index", "/")
+                .replace(".html", "")
+            return finalPathname
+        }
+
+        setInterval(async () => {
+            if (Router.route != currentLocation()) {
+                console.log("diferente")
+                const pathToShow = window.location.pathname.charAt(window.location.pathname.length - 1) === "/" ? "/index" : window.location.pathname
+                await this.changePath(`C:/users/felipe/desktop/cs/portfolio/pages${pathToShow}.html`)
             }
-        })
-
-        observer.observe(document, { childList: true, subtree: true })
+        }, 1000)
 
         const initialPath = window.location.pathname.charAt(window.location.pathname.length - 1) === "/" ? "/index" : window.location.pathname
-        setPath(`C:/users/felipe/desktop/cs/portfolio/pages${initialPath}.html`)
-    })
+        this.setState({ path: `C:/users/felipe/desktop/cs/portfolio/pages${initialPath}.html` })
+    }
 
-    const changePath = async (newPath: string) => {
+    private async changePath(newPath: string) {
+        if (newPath == null) return
         if (newPath.trim() == "") return
-        console.log(newPath)
-        if (changingTo == null) {
-            changingTo = newPath
-            const oldPath = path
 
-            const commonString = commonStr(oldPath, newPath)
+        if (!this.isChanging) {
+            console.log("chegou: " + newPath)
+            const oldPath = this.state.path
+
+            const commonString = this.commonStr(oldPath, newPath)
             if (commonString == null) return
 
             const amountToDelete = oldPath.length - commonString.length
-            const charArray = diffStr(oldPath, newPath)?.split("")
+            const charArray = this.diffStr(oldPath, newPath)?.split("")
 
             if (amountToDelete == null || charArray == null) return
 
-            if (amountToDelete > 0) await deleteChars(amountToDelete)
-            if (charArray.length > 0) await addChars(charArray)
-            changingTo = null
-
-            if (changeQueue != null) await changePath(path)
-        } else {
-            if (changeQueue !== newPath) changeQueue = newPath
+            this.isChanging = true
+            if (amountToDelete > 0) await this.deleteChars(amountToDelete)
+            if (charArray.length > 0) await this.addChars(charArray)
+            this.isChanging = false
         }
     }
 
-    const deleteChars = (amount: number, delay = 100): Promise<void> => {
+    private deleteChars(amount: number, delay = 100): Promise<void> {
         const removeChar = () => {
-            setPath(path.substring(0, path.length - 1))
+            this.setState({ path: this.state.path.substring(0, this.state.path.length - 1) })
         }
 
         amount = parseInt(`${amount}`)
@@ -69,10 +79,10 @@ export default function PathBar() {
         })
     }
 
-    const addChars = (chars: string | string[], delay = 100): Promise<void> => {
+    private addChars(chars: string | string[], delay = 100): Promise<void> {
         const addChar = (char: string) => {
-            const thisPath = path + char.charAt(0)
-            setPath(thisPath)
+            const thisPath = this.state.path + char.charAt(0)
+            this.setState({ path: thisPath })
         }
 
         let charArray: string[] = []
@@ -99,16 +109,16 @@ export default function PathBar() {
         })
     }
 
-    const diffStr = (str1: string, str2: string) => {
+    private diffStr(str1: string, str2: string) {
         if (str1 === str2) return null
 
-        const thisCommonStr = commonStr(str1, str2)
+        const thisCommonStr = this.commonStr(str1, str2)
         if (thisCommonStr == null) return null
 
         return str2.substring(thisCommonStr.length)
     }
 
-    const commonStr = (str1: string, str2: string) => {
+    private commonStr(str1: string, str2: string) {
         if (str1 === str2) return null
         const length = str1.length > str2.length ? str1.length : str2.length
 
@@ -122,12 +132,14 @@ export default function PathBar() {
         return str1.substring(0, endIndex)
     }
 
-    return (
-        <div className={styles.pathbar}>
-            <span className={styles.path}>{path}</span>
-            <span className={`${styles["text-cursor"]} ${styles["text-cursor-anim"]}`}></span>
-            <button><Link href="/">Intro</Link></button>
-            <button><Link href="/legal">Legal</Link></button>
-        </div>
-    )
+    render(): ReactNode {
+        return (
+            <div className={styles.pathbar}>
+                <span className={styles.path}>{this.state.path}</span>
+                <span className={`${styles["text-cursor"]} ${styles["text-cursor-anim"]}`}></span>
+                <button><Link href="/">Intro</Link></button>
+                <button><Link href="/legal">Legal</Link></button>
+            </div>
+        )
+    }
 }
