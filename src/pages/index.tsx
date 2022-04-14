@@ -1,9 +1,9 @@
-import PathBar from "../components/navbar/PathBar"
+import PathBar from "../components/pathbar/PathBar"
 
 export default function Home() {
     return (
         <>
-            <PathBar />
+            <h1>Legal</h1>
         </>
     )
 }
