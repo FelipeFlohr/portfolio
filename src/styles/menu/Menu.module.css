@@ -55,6 +55,25 @@
     margin-bottom: 20px;
 }
 
+.footer {
+    display: flex;
+    flex-grow: 1;
+    font-size: 11px;
+    align-items: flex-end;
+    justify-content: center;
+
+    color: var(--text-gray);
+
+    width: calc(100% + 20px);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% + 20px);
+    align-items: center;
+}
+
 @media (max-width: 784px) {
     .hide-button {
         visibility: visible;

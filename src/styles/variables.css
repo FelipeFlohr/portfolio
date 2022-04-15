@@ -2,9 +2,10 @@
     /* Colors */
     --bg-dark: #262626;
     --bg-white: #FBFBFB;
-    --bg-item-color: #fce6bc;
+    --bg-item-color: #a89570;
     --text-dark: #262626;
     --text-white: #FFF;
+    --text-gray: #cfb7b7;
 
     /* Dimensions */
     --pathbar-height: 45px;

@@ -27,7 +27,16 @@ export default function Menu() {
             </div>
             <h4>Felipe Matheus Flohr</h4>
             <Image src="/felipe-384.jpg" width={256} height={256} className={styles["portfolio-img"]} />
-            <Item href="/legal" className={styles["items-margin"]}>Aa</Item>
+            <div className={styles.links}>
+                <Item href="/" className={styles["items-margin"]}>Homepage</Item>
+                <Item href="/projects">Projects</Item>
+                <Item href="/skills">Skills</Item>
+                <Item href="/contact">Contact</Item>
+                <Item href="/about">About Me</Item>
+            </div>
+            <footer className={styles.footer}>
+                <span>Developed by Felipe Matheus Flohr - 2022</span>
+            </footer>
         </aside>
     )
 }
