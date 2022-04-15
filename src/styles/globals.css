@@ -38,7 +38,7 @@ body {
 
     grid-area: content;
     padding-top: 30px;
-    padding-left: 20px;
+    padding-left: 40px;
 
     color: var(--text-dark);
     background-color: var(--bg-white);

@@ -69,12 +69,14 @@ const projects: Project[] = [
     {
         name: "Watch2Gether Builder - Discord Bot",
         description: "Watch2Gether Builder description",
-        techs: [
+        languages: [
             languages.java, 
             languages.typescript, 
             languages.css, 
             languages.javascript,
-            languages.html,
+            languages.html
+        ],
+        tools: [
             toolsLibsFrameworks.docker,
             toolsLibsFrameworks.spring,
             toolsLibsFrameworks.selenium,
@@ -84,15 +86,16 @@ const projects: Project[] = [
     }
 ]
 
-interface Project {
+export interface Project {
     name: string,
     description: string,
-    techs: Technology[],
+    languages: Technology[],
+    tools?: Technology[],
     link: string,
     imgSrc?: string
 }
 
-interface Technology {
+export interface Technology {
     name: string,
     link?: string,
     color?: string
