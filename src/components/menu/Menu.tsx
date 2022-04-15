@@ -26,7 +26,7 @@ export default function Menu() {
                 <MenuIcon />
             </div>
             <h4>Felipe Matheus Flohr</h4>
-            <Image src="/felipe-384.jpg" width={256} height={256} className={styles["portfolio-img"]} />
+            <Image src="/felipe-384.jpg" width={256} height={256} className={styles["portfolio-img"]} alt="My profile picture" />
             <div className={styles.links}>
                 <Item href="/" className={styles["items-margin"]}>Homepage</Item>
                 <Item href="/projects">Projects</Item>
