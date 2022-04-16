@@ -82,7 +82,8 @@ const projects: Project[] = [
             toolsLibsFrameworks.selenium,
             toolsLibsFrameworks.socketio
         ],
-        link: "/projects/w2gbuilderdsbot"
+        link: "/projects/w2gbuilderdsbot",
+        imgSrc: "/testimg.png"
     }
 ]
 
