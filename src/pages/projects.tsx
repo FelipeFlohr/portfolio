@@ -1,52 +1,20 @@
 import { Component } from "react"
-import ProjectCard from "../components/projects/Card"
-import { Project } from "../pages/api/projects"
+import List from "../components/projects/List"
 import styles from "../styles/projects/Projects.module.css"
-
-interface ProjectsState {
-    cards: JSX.Element
-}
 
 export default class Projects extends Component {
 
-    state: ProjectsState = { cards: <></> }
-
-    componentDidMount() {
-        const renderCards = async () => {
-            const fetchData = await fetch(window.location.origin + "/api/projects")
-            const data: Project[] = await fetchData.json()
-
-            const cards: JSX.Element[] = []
-            data.forEach((d, i) => {
-                cards.push(
-                    <ProjectCard
-                        name={d.name}
-                        desc={d.description}
-                        languages={d.languages}
-                        link={d.link}
-                        imgSrc={d.imgSrc}
-                        tools={d.tools}
-                        key={i}
-                    />
-                )
-            })
-
-            this.setState({
-                cards:
-                    <>
-                        {cards}
-                    </>
-            })
-        }
-
-        renderCards()
-    }
-
     render() {
         return (
-            <div className={styles.cards}>
-                {this.state.cards}
-            </div>
+            <>
+                <header>
+                    <h1>My Projects</h1>
+                    <h4>The list below contains all my projects:</h4>
+                </header>
+                <section className={styles["list-container"]}>
+                    <List />
+                </section>
+            </>
         )
     }
 }

@@ -1,0 +1,50 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family-default);
+
+    grid-area: content;
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 20px;
+
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+
+    overflow: scroll;
+}
+
+/* Headers size & weight */
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.content h1 {
+    font-size: calc(1.375rem + 1.5vw);
+}
+
+.content h2 {
+    font-size: calc(1.325rem + .9vw);
+}
+
+.content h3 {
+    font-size: calc(1.3rem + .6vw);
+}
+
+.content h4 {
+    font-size: calc(1.275rem + .3vw);
+}
+
+.content h5 {
+    font-size: 1.25rem;
+}
+
+.content h6 {
+    font-size: 1rem;
+}

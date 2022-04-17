@@ -82,8 +82,7 @@ const projects: Project[] = [
             toolsLibsFrameworks.selenium,
             toolsLibsFrameworks.socketio
         ],
-        link: "/projects/w2gbuilderdsbot",
-        imgSrc: "/testimg.png"
+        link: "/projects/w2gbuilderdsbot"
     }
 ]
 
@@ -92,12 +91,12 @@ export interface Project {
     description: string,
     languages: Technology[],
     tools?: Technology[],
-    link: string,
-    imgSrc?: string
+    link: string
 }
 
 export interface Technology {
     name: string,
     link?: string,
     color?: string
+    icon?: JSX.Element
 }

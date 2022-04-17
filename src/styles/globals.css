@@ -1,4 +1,9 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+
 @import "./variables.css";
+@import "./content.css";
+@import "./responsive.css";
 
 * {
     box-sizing: content-box;
@@ -31,36 +36,4 @@ body {
 
 .menu {
     grid-area: menu;
-}
-
-.content {
-    display: flex;
-
-    grid-area: content;
-    padding-top: 30px;
-    padding-left: 40px;
-    padding-right: 20px;
-
-    color: var(--text-dark);
-    background-color: var(--bg-white);
-
-    overflow: scroll;
-}
-
-@media (max-width: 784px) {
-    .menu-hidden#__next {
-        grid-template-columns: var(--aside-width-md);
-    }
-
-    .menu-hidden#__next > .menu * {
-        visibility: hidden;
-    }
-
-    .menu-hidden#__next > .menu .hide-btn {
-        visibility: visible;
-    }
-
-    .menu-hidden#__next > .menu .hide-btn * {
-        visibility: visible;
-    }
 }

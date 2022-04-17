@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    flex-direction: column;
+}
+
+.filters {
+    display: grid;
+    grid-template-areas: "project-name-filter techs-filter";
+    grid-template-columns: 50% 50%;
+
+    max-width: 500px;
+}
+
+.project-name-filter {
+    grid-area: project-name-filter;
+}
+
+.techs-dropdown {
+    grid-area: techs-filter;
+}
+
+.content {
+    width: 100%;
+}
+
+@media (max-width: 630px) {
+    .filters {
+        grid-template-areas: 
+            "project-name-filter"
+            "techs-filter";
+        grid-template-rows: 35px 1fr;
+        grid-template-columns: none;
+    }
+
+    .filters * {
+        margin: 1px 0px;
+    }
+
+    .project-name-filter label {
+        font-size: 0.8rem;
+    }
+
+    .project-name-filter input {
+        width: 100%;
+    }
+}

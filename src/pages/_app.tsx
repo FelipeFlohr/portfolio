@@ -8,9 +8,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <>
             <PathBar />
             <Menu />
-            <div className="content">
+            <main className="content">
                 <Component {...pageProps} />
-            </div>
+            </main>
         </>
     )
 }
