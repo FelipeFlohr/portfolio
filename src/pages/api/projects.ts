@@ -4,7 +4,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.send(projects)
 }
 
-const languages = {
+const techs = {
     java: {
         name: "Java",
         color: "#e67410"
@@ -32,10 +32,7 @@ const languages = {
     scss: {
         name: "SASS",
         color: "#d128a4"
-    }
-}
-
-const toolsLibsFrameworks = {
+    },
     docker: {
         name: "Docker",
         color: "#1f171d"
@@ -69,29 +66,49 @@ const projects: Project[] = [
     {
         name: "Watch2Gether Builder - Discord Bot",
         description: "Watch2Gether Builder description",
-        languages: [
-            languages.java, 
-            languages.typescript, 
-            languages.css, 
-            languages.javascript,
-            languages.html
+        technologies: [
+            techs.java, 
+            techs.typescript, 
+            techs.css, 
+            techs.javascript,
+            techs.html,
+            techs.docker,
+            techs.spring,
+            techs.selenium,
+            techs.socketio
         ],
-        tools: [
-            toolsLibsFrameworks.docker,
-            toolsLibsFrameworks.spring,
-            toolsLibsFrameworks.selenium,
-            toolsLibsFrameworks.socketio
+        link: "/projects/w2gbuilderdsbot",
+        date: dateTime(3, 2, 2022)
+    },
+    {
+        name: "Portfolio",
+        description: "My Portfolio",
+        technologies: [
+            techs.typescript,
+            techs.css,
+            techs.react,
+            techs.next
         ],
-        link: "/projects/w2gbuilderdsbot"
+        link: "/projects/portfolio",
+        date: dateTime(8, 4, 2022)
     }
 ]
+
+function dateTime(day: number, month: number, year: number) {
+    const date = new Date()
+    date.setDate(day)
+    date.setMonth(month)
+    date.setFullYear(year)
+
+    return date
+}
 
 export interface Project {
     name: string,
     description: string,
-    languages: Technology[],
-    tools?: Technology[],
-    link: string
+    technologies: Technology[]
+    link: string,
+    date: Date
 }
 
 export interface Technology {
