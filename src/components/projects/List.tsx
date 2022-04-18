@@ -4,7 +4,7 @@ import styles from "../../styles/projects/List.module.css";
 import Checkbox from "../widgets/Checkbox";
 import Dropdown from "../widgets/Dropdown";
 import InputText from "../widgets/InputText";
-import ListTable from "./Table";
+import ListTable from "./ListTable";
 
 interface ListState {
     table: JSX.Element,

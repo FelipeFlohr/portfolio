@@ -1,7 +1,11 @@
 .table {
+    display: table;
     border-radius: 15px;
     box-shadow: var(--projects-table-shadow);
     border-collapse: collapse;
+    overflow: hidden;
+
+    table-layout: fixed;
 
     width: 100%;
     background: var(--bg-table-color);
@@ -15,6 +19,7 @@
 
 .tech {
     display: flex;
+    flex-flow: wrap;
 }
 
 .tech * {
@@ -24,10 +29,5 @@
 @media (max-width: 812px) {
     .desc {
         display: none;
-    }
-
-    .table tr {
-        text-decoration: underline;
-        text-underline-offset: 3px;
     }
 }

@@ -1,7 +1,7 @@
 import React from "react"
 import { Project } from "../../pages/api/projects"
-import styles from "../../styles/projects/Table.module.css"
-import TableData from "./table/TableData"
+import styles from "../../styles/projects/ListTable.module.css"
+import TableRow from "./table/TableRow"
 import TechIcon from "./table/TechIcon"
 
 interface ListTableProps {
@@ -13,7 +13,7 @@ export default function ListTable(props: ListTableProps) {
     const renderContent = () => {
         return props.projects.map((project, i) => {
             return (
-                <TableData
+                <TableRow
                     key={i}
                     projectName={project.name}
                     projectDesc={project.description}

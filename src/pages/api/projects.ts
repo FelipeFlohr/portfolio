@@ -121,6 +121,28 @@ const projects: Project[] = [
         ],
         link: "/projects/portfolio",
         date: dateTime(8, 4, 2022)
+    },
+    {
+        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        description: "Vivamus erat leo, hendrerit sed risus ut, malesuada lobortis nisl. Proin iaculis dignissim leo eget interdum. Vivamus et volutpat justo, nec convallis dui. In quam tortor, faucibus at aliquet nec, porta ut dolor. Vestibulum vestibulum odio non turpis lobortis, tempus faucibus libero finibus. Phasellus mattis nisl felis, eget rutrum mauris aliquam vitae. Quisque vestibulum pretium leo, a porttitor quam scelerisque a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec malesuada mattis finibus. In hac habitasse platea dictumst. Cras nec nisi quis massa malesuada hendrerit.",
+        technologies: [
+            techs.css,
+            techs.docker,
+            techs.html,
+            techs.java,
+            techs.javascript,
+            techs.mysql,
+            techs.next,
+            techs.python,
+            techs.react,
+            techs.scss,
+            techs.selenium,
+            techs.socketio,
+            techs.spring,
+            techs.typescript
+        ],
+        link: "/projects",
+        date: dateTime(18, 4, 2022)
     }
 ]
 
