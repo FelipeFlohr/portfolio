@@ -1,0 +1,13 @@
+.icon {
+    width: 25px;
+    height: 25px;
+
+    transition-property: transform;
+    transition-timing-function: linear;
+    transition-duration: 150ms;
+}
+
+.icon:hover {
+    cursor: pointer;
+    transform: scale(1.4);
+}

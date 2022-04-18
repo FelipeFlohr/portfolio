@@ -4,6 +4,7 @@
     --bg-white: #fbfbfb;
     --bg-light-gray: #e9ecef;
     --bg-item-color: #a89570;
+    --bg-table-color: linear-gradient(to right, #673ab7, #512da8);
     --text-dark: #262626;
     --text-white: #fff;
     --text-gray: #cfb7b7;
@@ -19,11 +20,13 @@
     --pathbar-border: 3px solid #fff;
     --aside-border: 3px solid #fff;
     --input-text-border: 1px solid #d2d8df;
+    --projects-table-border: 2px solid #d2d8df;
 
     /* Shadow */
     --pathbar-shadow: 0px 10px 25px 10px rgba(0, 0, 0, 0.35);
     --aside-shadow: 10px 0px 25px 10px rgba(0, 0, 0, 0.35);
     --dropdown-shadow: 0px 15px 20px 3px rgba(0,0,0,0.30);
+    --projects-table-shadow: 0px 0px 20px 5px rgba(0,0,0,0.25);
 
     /* Fonts */
     --font-family-default: "Open Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
