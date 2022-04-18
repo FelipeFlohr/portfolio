@@ -9,7 +9,7 @@
     color: var(--text-white);
 }
 
-.table td {
+.table th {
     padding: 10px;
 }
 
