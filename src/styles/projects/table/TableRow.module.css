@@ -7,7 +7,7 @@
     transition-duration: 100ms;
 }
 
-.tr td > span {
+.tr td>span {
     min-height: 60px;
     max-height: 115px;
     padding: 0 10px;
@@ -30,7 +30,7 @@
     text-align: center;
 }
 
-.desc > div {
+.desc>div {
     display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;

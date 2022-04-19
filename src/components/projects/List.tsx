@@ -25,24 +25,24 @@ export default class List extends Component<ListProps, ListState> {
 
     private getDropdownTechs() {
         const techs = new Set<string>()
-            const techsElements: JSX.Element[] = []
+        const techsElements: JSX.Element[] = []
 
-            this.props.projects.forEach(project => {
-                project.technologies.forEach(tech => {
-                    techs.add(tech.name)
-                })
+        this.props.projects.forEach(project => {
+            project.technologies.forEach(tech => {
+                techs.add(tech.name)
             })
+        })
 
-            techs.forEach(tech => {
-                let techId: number = 0
-                tech.split("").forEach(char => techId += char.charCodeAt(0))
+        techs.forEach(tech => {
+            let techId: number = 0
+            tech.split("").forEach(char => techId += char.charCodeAt(0))
 
-                techsElements.push(
-                    <Checkbox key={techId} startChecked={true} onChange={() => this.setFilters()}>{tech}</Checkbox>
-                )
-            })
+            techsElements.push(
+                <Checkbox key={techId} startChecked={true} onChange={() => this.setFilters()}>{tech}</Checkbox>
+            )
+        })
 
-            return techsElements
+        return techsElements
     }
 
     private setFilters() {

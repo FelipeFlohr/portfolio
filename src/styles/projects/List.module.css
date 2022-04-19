@@ -30,7 +30,7 @@
 
 @media (max-width: 630px) {
     .filters {
-        grid-template-areas: 
+        grid-template-areas:
             "project-name-filter"
             "techs-filter";
         grid-template-rows: 35px 1fr;

@@ -3,15 +3,15 @@
         grid-template-columns: var(--aside-width-md);
     }
 
-    .menu-hidden#__next > .menu * {
+    .menu-hidden#__next>.menu * {
         visibility: hidden;
     }
 
-    .menu-hidden#__next > .menu .hide-btn {
+    .menu-hidden#__next>.menu .hide-btn {
         visibility: visible;
     }
 
-    .menu-hidden#__next > .menu .hide-btn * {
+    .menu-hidden#__next>.menu .hide-btn * {
         visibility: visible;
     }
 }

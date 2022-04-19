@@ -181,9 +181,9 @@ const projects: Project[] = [
         name: "Watch2Gether Builder - Discord Bot",
         description: "TODO",
         technologies: [
-            techs.java, 
-            techs.typescript, 
-            techs.css, 
+            techs.java,
+            techs.typescript,
+            techs.css,
             techs.javascript,
             techs.html,
             techs.docker,
@@ -297,7 +297,7 @@ const projects: Project[] = [
             techs.selenium
         ],
         link: "/projects/w2gbuilderjava",
-        date: dateTime(2,7, 2021)
+        date: dateTime(2, 7, 2021)
     },
     {
         name: "Podcast Render",
