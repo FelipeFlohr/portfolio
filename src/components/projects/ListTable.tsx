@@ -11,7 +11,11 @@ interface ListTableProps {
 export default function ListTable(props: ListTableProps) {
 
     const renderContent = () => {
-        return props.projects.map((project, i) => {
+        const projectsSorted = props.projects.sort((pj1, pj2) => {
+            return new Date(pj2.date).getTime() - new Date(pj1.date).getTime()
+        })
+
+        return projectsSorted.map((project, i) => {
             return (
                 <TableRow
                     key={i}
@@ -26,7 +30,10 @@ export default function ListTable(props: ListTableProps) {
     }
 
     const renderTechs = (project: Project) => {
-        const techs = project.technologies.map((tech, i) => (
+        const techsSorted = project.technologies.sort((el1, el2) => {
+            return el1.name.localeCompare(el2.name)
+        })
+        const techs = techsSorted.map((tech, i) => (
             <TechIcon technology={tech} key={i} />
         ))
 
