@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { CssIcon, DockerIcon, HtmlIcon, JavaIcon, JavascriptIcon, MySqlIcon, NextIcon, PythonIcon, ReactIcon, SassIcon, SeleniumIcon, SocketIoIcon, SpringIcon, TypescriptIcon } from "../../components/icons/Icons";
+import { AngularIcon, BabelIcon, BootstrapIcon, CssIcon, DockerIcon, ElectronIcon, ExpressIcon, FirebaseIcon, GulpIcon, HtmlIcon, JavaIcon, JavascriptIcon, MongoDbIcon, MySqlIcon, NextIcon, NodeIcon, PandasIcon, PostgresIcon, PythonIcon, ReactIcon, SassIcon, SeleniumIcon, SocketIoIcon, SpringIcon, TailwindIcon, TypescriptIcon, VueJsIcon, WebpackIcon } from "../../components/icons/Icons";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.send(projects)
@@ -89,13 +89,97 @@ const techs = {
         color: "#3e403d",
         icon: SocketIoIcon(),
         link: "https://socket.io/"
+    },
+    nodejs: {
+        name: "Node.js",
+        color: "#6dde8b",
+        icon: NodeIcon(),
+        link: "https://nodejs.org/"
+    },
+    gulp: {
+        name: "Gulp",
+        color: "#b86767",
+        icon: GulpIcon(),
+        link: "https://gulpjs.com/"
+    },
+    babel: {
+        name: "Babel",
+        color: "#d1c92c",
+        icon: BabelIcon(),
+        link: "https://babeljs.io/"
+    },
+    webpack: {
+        name: "Webpack",
+        color: "#98d3eb",
+        icon: WebpackIcon(),
+        link: "https://webpack.js.org/"
+    },
+    bootstrap: {
+        name: "Bootstrap",
+        color: "#0037ff",
+        icon: BootstrapIcon(),
+        link: "https://getbootstrap.com/"
+    },
+    tailwind: {
+        name: "TailwindCSS",
+        color: "#708cba",
+        icon: TailwindIcon(),
+        link: "https://tailwindcss.com/"
+    },
+    angular: {
+        name: "Angular",
+        color: "#a15050",
+        icon: AngularIcon(),
+        link: "https://angular.io/"
+    },
+    vuejs: {
+        name: "Vue.js",
+        color: "#55bd7e",
+        icon: VueJsIcon(),
+        link: "https://vuejs.org/"
+    },
+    firebase: {
+        name: "Firebase",
+        color: "#daff75",
+        icon: FirebaseIcon(),
+        link: "https://firebase.google.com/"
+    },
+    electron: {
+        name: "Electron",
+        color: "#bfd6db",
+        icon: ElectronIcon(),
+        link: "https://www.electronjs.org/"
+    },
+    postgres: {
+        name: "PostgresSQL",
+        color: "#5f7f87",
+        icon: PostgresIcon(),
+        link: "https://www.postgresql.org/"
+    },
+    mongodb: {
+        name: "MongoDB",
+        color: "#00ff59",
+        icon: MongoDbIcon(),
+        link: "https://www.mongodb.com/"
+    },
+    express: {
+        name: "Express",
+        color: "#fff",
+        icon: ExpressIcon(),
+        link: "https://expressjs.com/"
+    },
+    pandas: {
+        name: "Pandas",
+        color: "#fff",
+        icon: PandasIcon(),
+        link: "https://pandas.pydata.org/"
     }
 }
 
 const projects: Project[] = [
     {
         name: "Watch2Gether Builder - Discord Bot",
-        description: "Watch2Gether Builder description",
+        description: "TODO",
         technologies: [
             techs.java, 
             techs.typescript, 
@@ -112,8 +196,9 @@ const projects: Project[] = [
     },
     {
         name: "Portfolio",
-        description: "My Portfolio",
+        description: "TODO",
         technologies: [
+            techs.nodejs,
             techs.typescript,
             techs.css,
             techs.react,
@@ -123,26 +208,153 @@ const projects: Project[] = [
         date: dateTime(8, 4, 2022)
     },
     {
-        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        description: "Vivamus erat leo, hendrerit sed risus ut, malesuada lobortis nisl. Proin iaculis dignissim leo eget interdum. Vivamus et volutpat justo, nec convallis dui. In quam tortor, faucibus at aliquet nec, porta ut dolor. Vestibulum vestibulum odio non turpis lobortis, tempus faucibus libero finibus. Phasellus mattis nisl felis, eget rutrum mauris aliquam vitae. Quisque vestibulum pretium leo, a porttitor quam scelerisque a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec malesuada mattis finibus. In hac habitasse platea dictumst. Cras nec nisi quis massa malesuada hendrerit.",
+        name: "Web Development Course",
+        description: "TODO",
         technologies: [
-            techs.css,
-            techs.docker,
-            techs.html,
-            techs.java,
+            techs.nodejs,
             techs.javascript,
-            techs.mysql,
-            techs.next,
-            techs.python,
-            techs.react,
+            techs.html,
+            techs.css,
+            techs.gulp,
+            techs.babel,
             techs.scss,
-            techs.selenium,
-            techs.socketio,
-            techs.spring,
-            techs.typescript
+            techs.typescript,
+            techs.webpack,
+            techs.bootstrap,
+            techs.react,
+            techs.next,
+            techs.tailwind,
+            techs.firebase,
+            techs.vuejs,
+            techs.angular,
+            techs.electron,
+            techs.express,
+            techs.postgres,
+            techs.mongodb
         ],
-        link: "/projects",
-        date: dateTime(18, 4, 2022)
+        link: "/projects/webcourse",
+        date: dateTime(4, 1, 2022)
+    },
+    {
+        name: "Electron - Autodrawer",
+        description: "TODO",
+        technologies: [
+            techs.nodejs,
+            techs.typescript,
+            techs.html,
+            techs.javascript,
+            techs.scss,
+            techs.gulp,
+            techs.babel,
+            techs.webpack,
+            techs.bootstrap,
+            techs.electron
+        ],
+        link: "/projects/electronautodrawer",
+        date: dateTime(8, 3, 2022)
+    },
+    {
+        name: "Node - Autodrawer",
+        description: "TODO",
+        technologies: [
+            techs.nodejs,
+            techs.javascript,
+            techs.gulp,
+            techs.babel,
+            techs.typescript,
+            techs.bootstrap
+        ],
+        link: "/projects/nodeautodrawer",
+        date: dateTime(14, 12, 2021)
+    },
+    {
+        name: ".txt Video Opener",
+        description: "TODO",
+        technologies: [
+            techs.html,
+            techs.css,
+            techs.javascript
+        ],
+        link: "/projects/txtvideoopener",
+        date: dateTime(9, 7, 2021)
+    },
+    {
+        name: "Java Course",
+        description: "TODO",
+        technologies: [
+            techs.java,
+            techs.spring,
+            techs.mysql
+        ],
+        link: "/projects/javacourse",
+        date: dateTime(16, 8, 2021)
+    },
+    {
+        name: "Watch2Gether Builder - Java",
+        description: "TODO",
+        technologies: [
+            techs.java,
+            techs.selenium
+        ],
+        link: "/projects/w2gbuilderjava",
+        date: dateTime(2,7, 2021)
+    },
+    {
+        name: "Podcast Render",
+        description: "TODO",
+        technologies: [
+            techs.python,
+            techs.java
+        ],
+        link: "/projects/podcastrender",
+        date: dateTime(27, 8, 2021)
+    },
+    {
+        name: "Frame Extractor",
+        description: "TODO",
+        technologies: [
+            techs.java
+        ],
+        link: "/projects/frameextractor",
+        date: dateTime(1, 7, 2021)
+    },
+    {
+        name: "Uno - Java",
+        description: "TODO",
+        technologies: [
+            techs.java
+        ],
+        link: "/projects/unojava",
+        date: dateTime(6, 11, 2021)
+    },
+    {
+        name: "Uno - Python",
+        description: "TODO",
+        technologies: [
+            techs.python
+        ],
+        link: "/projects/unopython",
+        date: dateTime(30, 3, 2021)
+    },
+    {
+        name: "Python - Autodrawer",
+        description: "TODO",
+        technologies: [
+            techs.python
+        ],
+        link: "/projects/pythonautodrawer",
+        date: dateTime(9, 6, 2021)
+    },
+    {
+        name: "Python - Brasileirão",
+        description: "TODO",
+        technologies: [
+            techs.python,
+            techs.pandas,
+            techs.selenium
+        ],
+        link: "/projects/pythonbrasileirao",
+        date: dateTime(19, 4, 2021)
     }
 ]
 

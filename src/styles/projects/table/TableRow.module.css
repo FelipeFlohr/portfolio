@@ -9,7 +9,7 @@
 
 .tr td > span {
     min-height: 60px;
-    max-height: 110px;
+    max-height: 115px;
     padding: 0px 10px;
 
     display: flex;
@@ -23,16 +23,20 @@
     text-align: center;
 }
 
-.desc {
+.desc > div {
     display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     overflow: hidden;
+
+    margin: 5px 0px;
 }
 
 .tr:hover {
     transform: scale(1.03);
     overflow: visible;
+
+    cursor: pointer;
 }
 
 @media (max-width: 812px) {
