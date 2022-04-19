@@ -2,7 +2,7 @@
     background-color: var(--bg-item-color);
 
     display: flex;
-    width: 0px;
+    width: 0;
     height: 40px;
 
     align-items: center;

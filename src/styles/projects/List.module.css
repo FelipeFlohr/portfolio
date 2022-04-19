@@ -38,7 +38,7 @@
     }
 
     .filters * {
-        margin: 1px 0px;
+        margin: 1px 0;
     }
 
     .project-name-filter label {

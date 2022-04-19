@@ -10,13 +10,20 @@
 .tr td > span {
     min-height: 60px;
     max-height: 115px;
-    padding: 0px 10px;
+    padding: 0 10px;
 
     display: flex;
     overflow: hidden;
 
     align-items: center;
     justify-content: center;
+}
+
+.tr:hover {
+    transform: scale(1.03);
+    overflow: visible;
+
+    cursor: pointer;
 }
 
 .name {
@@ -29,14 +36,7 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 
-    margin: 5px 0px;
-}
-
-.tr:hover {
-    transform: scale(1.03);
-    overflow: visible;
-
-    cursor: pointer;
+    margin: 5px 0;
 }
 
 @media (max-width: 812px) {

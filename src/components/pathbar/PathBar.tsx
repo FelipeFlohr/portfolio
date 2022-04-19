@@ -1,5 +1,5 @@
 import Router from "next/router"
-import { Component, ReactNode } from "react"
+import {Component, ReactNode} from "react"
 import styles from "../../styles/pathbar/Pathbar.module.css"
 
 type PathBarState = {
@@ -15,10 +15,9 @@ export default class PathBar extends Component {
     componentDidMount() {
         let currentLocation = () => {
             const pathnameShowing = this.state.path.substring(42)
-            const finalPathname = pathnameShowing
+            return pathnameShowing
                 .replace("/index", "/")
                 .replace(".html", "")
-            return finalPathname
         }
 
         setInterval(async () => {
