@@ -11,6 +11,8 @@
     background: var(--bg-table-color);
 
     color: var(--text-white);
+
+    margin-bottom: 40px;
 }
 
 .table th {
@@ -20,6 +22,8 @@
 .tech {
     display: flex;
     flex-flow: wrap;
+
+    padding-right: 15px;
 }
 
 .tech * {

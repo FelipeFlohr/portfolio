@@ -1,6 +1,6 @@
 import ProjectLayout from "../../components/projects/ProjectLayout";
 
-export default function W2GBuilderDsBot() {
+export default function NodeAutodrawer() {
     return (
         <ProjectLayout>
             <></>

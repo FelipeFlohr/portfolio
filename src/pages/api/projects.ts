@@ -3,7 +3,7 @@ import { projects } from "../../data/projects";
 import { techs } from "../../data/technologies";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-    res.send(projects)
+    res.status(200).send(projects)
 }
 
 export function getTechIcon(technology: Technology) {
