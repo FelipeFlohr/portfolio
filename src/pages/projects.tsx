@@ -38,9 +38,9 @@ export default class Projects extends Component {
                     <h1>My Projects</h1>
                     <h4>The list below contains all my projects:</h4>
                 </header>
-                <section className={styles["list-container"]}>
+                <div className={styles["list-container"]}>
                     {this.renderList()}
-                </section>
+                </div>
             </>
         )
     }
