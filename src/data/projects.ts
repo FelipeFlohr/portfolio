@@ -1,5 +1,5 @@
 import { Project } from "../pages/api/projects";
-import { electronAutodrawerDesc, portfolioDesc, w2gBuilderDsBotDesc, webDevelopmentCourseDesc } from "./projectsdesc";
+import { electronAutodrawerDesc, frameExtractorDesc, javaCourseDesc, nodeAutodrawerDesc, podcastRenderDesc, portfolioDesc, pythonAutodrawerDesc, pythonBrasileiraoDesc, txtVideoOpenerDesc, unoJavaDesc, unoPythonDesc, w2gBuilderDsBotDesc, w2gBuilderJavaDesc, webDevelopmentCourseDesc } from "./projectsdesc";
 import { techs } from "./technologies";
 
 export const projects: Project[] = [
@@ -62,7 +62,7 @@ export const projects: Project[] = [
         date: dateTime(4, 1, 2022)
     },
     {
-        name: "Electron - Autodrawer",
+        name: "Autodrawer - Electron",
         description: electronAutodrawerDesc,
         technologies: [
             techs.nodejs,
@@ -80,8 +80,8 @@ export const projects: Project[] = [
         date: dateTime(8, 3, 2022)
     },
     {
-        name: "Node - Autodrawer",
-        description: "TODO",
+        name: "Autodrawer - Node",
+        description: nodeAutodrawerDesc,
         technologies: [
             techs.nodejs,
             techs.javascript,
@@ -95,7 +95,7 @@ export const projects: Project[] = [
     },
     {
         name: ".txt Video Opener",
-        description: "TODO",
+        description: txtVideoOpenerDesc,
         technologies: [
             techs.html,
             techs.css,
@@ -106,7 +106,7 @@ export const projects: Project[] = [
     },
     {
         name: "Java Course",
-        description: "TODO",
+        description: javaCourseDesc,
         technologies: [
             techs.java,
             techs.spring,
@@ -117,7 +117,7 @@ export const projects: Project[] = [
     },
     {
         name: "Watch2Gether Builder - Java",
-        description: "TODO",
+        description: w2gBuilderJavaDesc,
         technologies: [
             techs.java,
             techs.selenium
@@ -127,7 +127,7 @@ export const projects: Project[] = [
     },
     {
         name: "Podcast Render",
-        description: "TODO",
+        description: podcastRenderDesc,
         technologies: [
             techs.python,
             techs.java
@@ -137,7 +137,7 @@ export const projects: Project[] = [
     },
     {
         name: "Frame Extractor",
-        description: "TODO",
+        description: frameExtractorDesc,
         technologies: [
             techs.java
         ],
@@ -146,7 +146,7 @@ export const projects: Project[] = [
     },
     {
         name: "Uno - Java",
-        description: "TODO",
+        description: unoJavaDesc,
         technologies: [
             techs.java
         ],
@@ -155,7 +155,7 @@ export const projects: Project[] = [
     },
     {
         name: "Uno - Python",
-        description: "TODO",
+        description: unoPythonDesc,
         technologies: [
             techs.python
         ],
@@ -163,8 +163,8 @@ export const projects: Project[] = [
         date: dateTime(30, 3, 2021)
     },
     {
-        name: "Python - Autodrawer",
-        description: "TODO",
+        name: "Autodrawer - Python",
+        description: pythonAutodrawerDesc,
         technologies: [
             techs.python
         ],
@@ -173,7 +173,7 @@ export const projects: Project[] = [
     },
     {
         name: "Python - Brasileirão",
-        description: "TODO",
+        description: pythonBrasileiraoDesc,
         technologies: [
             techs.python,
             techs.pandas,
