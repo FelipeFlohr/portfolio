@@ -5,7 +5,7 @@ import styles from "../../styles/projects/ProjectLayout.module.css";
 import TechIcon from "./table/TechIcon";
 
 interface ProjectLayoutProps {
-    children: any
+    children: JSX.Element | JSX.Element[]
 }
 
 export default function ProjectLayout(props: ProjectLayoutProps) {
