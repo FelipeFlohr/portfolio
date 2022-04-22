@@ -5,6 +5,13 @@ import ImageDesc from "../../components/widgets/ImageDesc";
 export default function ElectronAutodrawer() {
     return (
         <ProjectLayout>
+            <button onClick={() => {
+                fetch("http://localhost:3000/api/projects").then(data => {
+                    data.json().then(json => {
+                        console.log(json)
+                    })
+                })
+            }}>Clique aqui</button>
             <section>
                 <h2>1. Introduction</h2>
                 <p>Autodrawer is a project of mine that draws an image
@@ -52,8 +59,8 @@ export default function ElectronAutodrawer() {
                     <li>Bootstrap and Sass: used for styling.</li>
                     <li><Link href="http://robotjs.io/">Robot.js:</Link> used
                         for desktop automation.</li>
-                    <li>Gulp: used for the building process. Used together with
-                        Babel and Webpack for "uglification" and compilation of Sass
+                    <li>Gulp: used for the building process. Together with
+                        Babel and Webpack, they "uglify" and compile Sass
                         and TypeScript files.
                     </li>
                 </ul>
