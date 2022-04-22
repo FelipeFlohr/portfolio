@@ -5,13 +5,6 @@ import ImageDesc from "../../components/widgets/ImageDesc";
 export default function ElectronAutodrawer() {
     return (
         <ProjectLayout>
-            <button onClick={() => {
-                fetch("http://localhost:3000/api/projects").then(data => {
-                    data.json().then(json => {
-                        console.log(json)
-                    })
-                })
-            }}>Clique aqui</button>
             <section>
                 <h2>1. Introduction</h2>
                 <p>Autodrawer is a project of mine that draws an image
