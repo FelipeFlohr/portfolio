@@ -13,7 +13,7 @@ interface TableDataProps {
 export default function TableRow(props: TableDataProps) {
     return (
         <>
-            <Link href={props.projectLink} passHref={false}>
+            <Link href={props.projectLink}>
                 <tr className={styles.tr} style={{ backgroundColor: props.rowColor == "light" ? "#2d2a31" : "#221e26" }}>
                     <td className={styles.name}><span>{props.projectName}</span></td>
                     <td className={styles.desc}><div><span>{props.projectDesc}</span></div></td>

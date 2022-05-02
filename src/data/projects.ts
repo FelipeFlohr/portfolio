@@ -17,7 +17,7 @@ export const projects: Project[] = [
             techs.selenium,
             techs.socketio
         ],
-        link: "/projects/w2gbuilderdsbot",
+        link: "https://github.com/FelipeFlohr/Watch2Gether-DiscordBuilder",
         date: dateTime(3, 2, 2022)
     },
     {
@@ -30,7 +30,7 @@ export const projects: Project[] = [
             techs.react,
             techs.next
         ],
-        link: "/projects/portfolio",
+        link: "https://github.com/FelipeFlohr/portfolio",
         date: dateTime(8, 4, 2022)
     },
     {
@@ -58,7 +58,7 @@ export const projects: Project[] = [
             techs.postgres,
             techs.mongodb
         ],
-        link: "/projects/webcourse",
+        link: "https://github.com/FelipeFlohr/curso-cod3r-webmoderno",
         date: dateTime(4, 1, 2022)
     },
     {
@@ -76,7 +76,7 @@ export const projects: Project[] = [
             techs.bootstrap,
             techs.electron
         ],
-        link: "/projects/electronautodrawer",
+        link: "https://github.com/FelipeFlohr/electron-autodrawer",
         date: dateTime(8, 3, 2022)
     },
     {
@@ -90,7 +90,7 @@ export const projects: Project[] = [
             techs.typescript,
             techs.bootstrap
         ],
-        link: "/projects/nodeautodrawer",
+        link: "https://github.com/FelipeFlohr/node-autodrawer",
         date: dateTime(14, 12, 2021)
     },
     {
@@ -101,7 +101,7 @@ export const projects: Project[] = [
             techs.css,
             techs.javascript
         ],
-        link: "/projects/txtvideoopener",
+        link: "https://github.com/FelipeFlohr/txt-video-opener",
         date: dateTime(9, 7, 2021)
     },
     {
@@ -112,7 +112,7 @@ export const projects: Project[] = [
             techs.spring,
             techs.mysql
         ],
-        link: "/projects/javacourse",
+        link: "https://github.com/FelipeFlohr/curso-cod3r-java",
         date: dateTime(16, 8, 2021)
     },
     {
@@ -122,7 +122,7 @@ export const projects: Project[] = [
             techs.java,
             techs.selenium
         ],
-        link: "/projects/w2gbuilderjava",
+        link: "https://github.com/FelipeFlohr/Watch2Gether-builder-Java",
         date: dateTime(2, 7, 2021)
     },
     {
@@ -132,7 +132,7 @@ export const projects: Project[] = [
             techs.python,
             techs.java
         ],
-        link: "/projects/podcastrender",
+        link: "https://github.com/FelipeFlohr/podcast-render",
         date: dateTime(27, 8, 2021)
     },
     {
@@ -141,7 +141,7 @@ export const projects: Project[] = [
         technologies: [
             techs.java
         ],
-        link: "/projects/frameextractor",
+        link: "https://github.com/FelipeFlohr/frame-extractor",
         date: dateTime(1, 7, 2021)
     },
     {
@@ -150,7 +150,7 @@ export const projects: Project[] = [
         technologies: [
             techs.java
         ],
-        link: "/projects/unojava",
+        link: "https://github.com/FelipeFlohr/UnoJava",
         date: dateTime(6, 11, 2021)
     },
     {
@@ -159,7 +159,7 @@ export const projects: Project[] = [
         technologies: [
             techs.python
         ],
-        link: "/projects/unopython",
+        link: "https://github.com/FelipeFlohr/unopython",
         date: dateTime(30, 3, 2021)
     },
     {
@@ -168,7 +168,7 @@ export const projects: Project[] = [
         technologies: [
             techs.python
         ],
-        link: "/projects/pythonautodrawer",
+        link: "https://github.com/FelipeFlohr/python-autodrawer",
         date: dateTime(9, 6, 2021)
     },
     {
@@ -179,7 +179,7 @@ export const projects: Project[] = [
             techs.pandas,
             techs.selenium
         ],
-        link: "/projects/pythonbrasileirao",
+        link: "https://github.com/FelipeFlohr/Python-Brasileirao",
         date: dateTime(19, 4, 2021)
     }
 ]
