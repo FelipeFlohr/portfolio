@@ -1,8 +1,17 @@
+import type NavbarLocalization from "../../shared/layout/components/navbar/locale/NavbarLocalization";
 import type TopbarLocalization from "../../shared/layout/components/topbar/locale/TopbarLocalization";
 import Localization from "../Localization";
 
 export default class EnglishLocalization extends Localization {
-    public override topBarLocalization: TopbarLocalization = {
+    public override readonly navBarLocalization: NavbarLocalization = {
+        aboutMeHref: "/en/about",
+        homeHref: "/en",
+        myExperienceHref: "/en/experience",
+        myProjectsHref: "/en/projects",
+        mySkillsHref: "/en/skills",
+    }
+
+    public override readonly topBarLocalization: TopbarLocalization = {
         pathToShowUnix: "/home/felipe/Documents/programming stuff/portfolio/",
         pathToShowWindows: "C:\\Users\\Felipe\\Documents\\programming stuff\\portfolio\\"
     }

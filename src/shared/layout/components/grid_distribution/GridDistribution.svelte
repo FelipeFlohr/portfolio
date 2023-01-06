@@ -12,8 +12,8 @@
         <div class="topbar topbar-grid">
             <Topbar localization={localization} pathToShow={pathToShow} />
         </div>
-        <div class="navbar">
-            <Navbar />
+        <div class="navbar overflow-x-hidden overflow-y-auto">
+            <Navbar localization={localization} />
         </div>
         <div class="content">
             <slot />
@@ -24,7 +24,7 @@
 <style scoped>
     .grid-content {
         width: 100%;
-        height: 100vh;
+        height: 100%;
 
         display: grid;
         grid-template-columns: 240px 1fr;
