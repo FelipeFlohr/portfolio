@@ -34,6 +34,20 @@
             "navbar content";
     }
 
+    @media (max-width: 640px) {
+        .grid-content {
+            width: 100%;
+            height: 100%;
+
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 56px 1fr;
+            grid-template-areas:
+                "navbar"
+                "content";
+        }
+    }
+
     .topbar {
         grid-area: topbar;
     }
