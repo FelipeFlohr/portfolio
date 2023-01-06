@@ -1,14 +1,16 @@
 <script lang="ts">
+    import type Localization from "../../../../localization/Localization";
     import Navbar from "../navbar/Navbar.svelte";
     import Topbar from "../topbar/Topbar.svelte";
 
     export let pathToShow: string;
+    export let localization: Localization;
 </script>
 
 <template>
     <div class="grid-content">
         <div class="topbar topbar-grid">
-            <Topbar pathToShow={pathToShow} />
+            <Topbar localization={localization} pathToShow={pathToShow} />
         </div>
         <div class="navbar">
             <Navbar />

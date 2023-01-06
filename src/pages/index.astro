@@ -1,7 +1,10 @@
 ---
-import Layout from "../shared/layout/views/Layout.astro";
+import EnglishLocalization from "../localization/en/EnglishLocalization";
+import IndexLanding from "../shared/index_landing/view/IndexLanding.svelte";
+import Layout from "../shared/layout/view/Layout.astro";
 ---
 
-<Layout title="Home" pathToShow="index.html">
-
-</Layout>
+<IndexLanding client:load>
+    <Layout localization={new EnglishLocalization()} title="Home" pathToShow="index.html">
+    </Layout>
+</IndexLanding>

@@ -1,12 +1,17 @@
 <script lang="ts">
     import { onMount } from "svelte";
+    import type Localization from "../../../../localization/Localization";
 
     export let pathToShow: string;
+    export let localization: Localization;
 
-    const fullPath = `C:\\Users\\Felipe\\Documents\\programming stuff\\portfolio\\${pathToShow}`
     let currentPath = ""
 
     onMount(() => {
+        const fullPath = getUserOs() === "windows" 
+            ? `${localization.topBarLocalization.pathToShowWindows}${pathToShow}`
+            : `${localization.topBarLocalization.pathToShowUnix}${pathToShow}`
+
         const thisInterval = setInterval(() => {
             if(currentPath === fullPath) {
                 clearInterval(thisInterval)
@@ -17,6 +22,10 @@
             }
         }, 50)
     })
+
+    function getUserOs(): "windows" | "linux" {
+        return window.navigator.platform.toLowerCase().includes("windows") ? "windows" : "linux"
+    }
 </script>
 
 <template>
