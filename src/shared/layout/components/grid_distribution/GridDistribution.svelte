@@ -5,6 +5,7 @@
 
     export let pathToShow: string;
     export let localization: Localization;
+    export let pageTitle: string;
 </script>
 
 <template>
@@ -13,7 +14,7 @@
             <Topbar localization={localization} pathToShow={pathToShow} />
         </div>
         <div class="navbar overflow-x-hidden overflow-y-auto">
-            <Navbar localization={localization} />
+            <Navbar title={pageTitle} localization={localization} />
         </div>
         <div class="content">
             <slot />

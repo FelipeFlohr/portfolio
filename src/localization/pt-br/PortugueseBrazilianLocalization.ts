@@ -9,6 +9,12 @@ export default class PortugueseBrazilianLocalization extends Localization {
         myExperienceHref: "/pt/experience",
         myProjectsHref: "/pt/projects",
         mySkillsHref: "/pt/skills",
+        alsoAvailableInLanguages: "Também disponível em:",
+        homeText: "Início",
+        mySkillsText: "Minhas habilidades",
+        myExperienceText: "Minha experiência",
+        myProjectsText: "Meus projetos",
+        aboutMeText: "Sobre mim"
     }
 
     public override readonly topBarLocalization: TopbarLocalization = {

@@ -13,7 +13,7 @@ const { title, pathToShow, localization } = Astro.props;
 ---
 
 <HtmlStructure title={title}>
-    <GridDistribution client:visible localization={localization} pathToShow={pathToShow}>
-        <h1>Content</h1>
+    <GridDistribution client:visible pageTitle={title} localization={localization} pathToShow={pathToShow}>
+        <slot />
     </GridDistribution>
 </HtmlStructure>

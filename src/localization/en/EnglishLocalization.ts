@@ -9,6 +9,12 @@ export default class EnglishLocalization extends Localization {
         myExperienceHref: "/en/experience",
         myProjectsHref: "/en/projects",
         mySkillsHref: "/en/skills",
+        alsoAvailableInLanguages: "Also available in:",
+        homeText: "Home",
+        mySkillsText: "My skills",
+        myExperienceText: "My experience",
+        myProjectsText: "My projects",
+        aboutMeText: "About me"
     }
 
     public override readonly topBarLocalization: TopbarLocalization = {
