@@ -1,8 +1,6 @@
 ---
 import EnglishLocalization from "../../localization/en/EnglishLocalization";
-import Layout from "../../shared/layout/view/Layout.astro";
+import Home from "../../screens/home/view/home.astro";
 ---
 
-<Layout localization={new EnglishLocalization()} pathToShow="index.html" title="Home">
-    <h1>Content</h1>
-</Layout>
+<Home localization={new EnglishLocalization()} pathToShow="index.html" title="Home" />

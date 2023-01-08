@@ -47,6 +47,14 @@
                 "navbar"
                 "content";
         }
+
+        .topbar {
+            display: none !important;
+        }
+
+        .topbar-grid {
+            display: none !important;
+        }
     }
 
     .topbar {
