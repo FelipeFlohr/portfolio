@@ -49,6 +49,11 @@ pessoal na qual indica o quão familiarizado eu estou em relação
 á esta tecnologia. Para esta avaliação, nós temos:`,
         threeStarsText: "(Três estrelas): experiência profissional.",
         twoStarsText: "(Duas estrelas): conhecimento solidificado porém não profissional.",
-        oneStarText: "(Uma estrela): conhecimento dos conceitos principais."
+        oneStarText: "(Uma estrela): conhecimento dos conceitos principais.",
+        backendTechsHeaderText: "Tecnologias back-end:",
+        frontendTechsHeaderText: "Tecnologias front-end:",
+        miscKnowledgeHeaderText: "Outros conhecimentos:",
+        mobileTechsHeaderText: "Tecnologias Mobile:",
+        languagesHeaderText: "Linguagens:"
     }
 }

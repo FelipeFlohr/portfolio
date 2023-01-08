@@ -49,6 +49,11 @@ indicating how familiar I am with the technology. The rating
 works like this:`,
         threeStarsText: "(Three stars): real life professional experience.",
         twoStarsText: "(Two stars): solid knowledge but missing professional experience.",
-        oneStarText: "(One star): knowledge of the main concepts."
+        oneStarText: "(One star): knowledge of the main concepts.",
+        backendTechsHeaderText: "Back-end technologies:",
+        frontendTechsHeaderText: "Front-end technologies:",
+        miscKnowledgeHeaderText: "Misc. knowledges:",
+        mobileTechsHeaderText: "Mobile technologies:",
+        languagesHeaderText: "Languages:"
     }
 }

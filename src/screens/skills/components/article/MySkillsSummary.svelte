@@ -1,6 +1,9 @@
 <script lang="ts">
     import type Localization from "../../../../localization/Localization";
     import starSvg from "../../../../assets/icons/star.svg";
+    import SkillFrame from "../skill_frame/SkillFrame.svelte";
+    import SkillItem from "../skill_item/SkillItem.svelte";
+    import techStack from "../../data/technologies_knowledge";
 
     export let localization: Localization;
 </script>
@@ -38,5 +41,13 @@
                 </div>
             </li>
         </ul>
+        <hr class="border-gray-300">
+        <section class="mt-8">
+            <SkillFrame header={localization.mySkillsLocalization.languagesHeaderText}>
+                {#each techStack.languages as language}
+                    <SkillItem tech={language} />
+                {/each}
+            </SkillFrame>
+        </section>
     </article>
 </template>

@@ -16,7 +16,7 @@
         <div class="navbar overflow-x-hidden overflow-y-auto">
             <Navbar title={pageTitle} localization={localization} />
         </div>
-        <div class="content">
+        <div class="content overflow-auto">
             <slot />
         </div>
     </div>
