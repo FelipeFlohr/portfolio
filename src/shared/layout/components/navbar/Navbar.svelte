@@ -60,7 +60,7 @@
     { #if showModal }
         <!-- Mobile's Modal -->
         <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <div on:click={handleModal} class="absolute flex flex-col items-center justify-center top-0 w-full h-full bg-black/75 transition-all text-white">
+        <div on:click={handleModal} class="absolute z-10 flex flex-col items-center justify-center top-0 w-full h-full bg-black/95 transition-all text-white">
             <div>
                 <NavbarLinkMobile href={localization.navBarLocalization.homeHref}>{localization.navBarLocalization.homeText}</NavbarLinkMobile>
                 <NavbarLinkMobile href={localization.navBarLocalization.mySkillsHref}>{localization.navBarLocalization.mySkillsText}</NavbarLinkMobile>
