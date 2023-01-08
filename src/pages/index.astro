@@ -1,11 +1,9 @@
 ---
 import EnglishLocalization from "../localization/en/EnglishLocalization";
+import Home from "../screens/home/view/home.astro";
 import IndexLanding from "../shared/index_landing/view/IndexLanding.svelte";
-import Layout from "../shared/layout/view/Layout.astro";
 ---
 
 <IndexLanding client:load>
-    <Layout localization={new EnglishLocalization()} title="Home" pathToShow="index.html">
-        <h1>Content</h1>
-    </Layout>
+    <Home localization={new EnglishLocalization()} pathToShow="index.html" title="Home" />
 </IndexLanding>

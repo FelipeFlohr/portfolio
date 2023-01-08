@@ -13,8 +13,10 @@ const { title, pathToShow, localization } = Astro.props;
 
 <Layout localization={localization} pathToShow={pathToShow} title={title}>
     <FadeBackground>
-        <div class="w-full h-full flex flex-col justify-center items-center">
+        <div class="absolute ml-3 mt-1">
             <ConsoleLogTitle client:visible localization={localization} />
+        </div>
+        <div class="w-full h-full flex flex-col justify-center items-center">
             <header class="flex flex-col justify-center items-center my-8">
                 <Header localization={localization} />
             </header>

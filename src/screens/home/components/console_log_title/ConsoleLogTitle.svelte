@@ -49,14 +49,14 @@
 
 <template>
     <i>
-        <span class="text-2xl md:text-3xl flex flex-nowrap">
+        <span class="text-sm flex flex-nowrap">
             <span class="mr-2">>></span>
             <span class="console">{consoleString}</span>
             <span class="log">{logString}</span>
             <span class="parenthesis">{firstParenthesisString}</span>
             <span class="string">{helloWorldString}</span>
             <span class="parenthesis">{lastParenthesisString}</span>
-            <div class="cursor w-3 md:w-4 h-6 md:h-8 mt-1 ml-3" />
+            <div class="cursor w-2 h-4 ml-2" />
         </span>
     </i>
 </template>
@@ -80,6 +80,8 @@
 
     .cursor {
         background-color: #FFF;
+        margin-top: 3px;
+
         animation: cursor-animation;
         animation-duration: 1s;
         animation-timing-function: steps(2);
