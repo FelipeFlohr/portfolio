@@ -1,6 +1,7 @@
 import type ConsoleLogTitleLocalization from "../../screens/home/components/console_log_title/locale/ConsoleLogTitleLocalization";
 import type HeaderLocalization from "../../screens/home/components/header/locale/HeaderLocalization";
 import type NavigationLocalization from "../../screens/home/components/navigation/locale/NavigationLocalization";
+import type MySkillsLocalization from "../../screens/skills/locale/MySkillsLocalization";
 import type NavbarLocalization from "../../shared/layout/components/navbar/locale/NavbarLocalization";
 import type TopbarLocalization from "../../shared/layout/components/topbar/locale/TopbarLocalization";
 import Localization from "../Localization";
@@ -37,5 +38,17 @@ export default class EnglishLocalization extends Localization {
 
     public override readonly navigationLocalization: NavigationLocalization = {
         feelFreeToExploreText: "Feel free to explore:"
+    }
+
+    public override readonly mySkillsLocalization: MySkillsLocalization = {
+        mySkillsTitleText: "My skills",
+        technologiesSummaryText: `Down below you can check the
+tools/programming languages/technologies in which I have some
+kind of knowledge. Next to them you will find a personal rating
+indicating how familiar I am with the technology. The rating
+works like this:`,
+        threeStarsText: "(Three stars): real life professional experience.",
+        twoStarsText: "(Two stars): solid knowledge but missing professional experience.",
+        oneStarText: "(One star): knowledge of the main concepts."
     }
 }

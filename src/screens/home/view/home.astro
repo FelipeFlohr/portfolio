@@ -1,7 +1,6 @@
 ---
 import Layout from '../../../shared/layout/view/Layout.astro';
 import type DefaultProps from '../../../types/DefaultProps';
-import ConsoleLogTitle from '../components/console_log_title/ConsoleLogTitle.svelte';
 import FadeBackground from '../components/fade_background/FadeBackground.svelte';
 import Header from '../components/header/Header.svelte';
 import Navigation from '../components/navigation/Navigation.svelte';
@@ -13,9 +12,6 @@ const { title, pathToShow, localization } = Astro.props;
 
 <Layout localization={localization} pathToShow={pathToShow} title={title}>
     <FadeBackground>
-        <div class="absolute ml-3 mt-1">
-            <ConsoleLogTitle client:visible localization={localization} />
-        </div>
         <div class="w-full h-full flex flex-col justify-center items-center">
             <header class="flex flex-col justify-center items-center my-8">
                 <Header localization={localization} />

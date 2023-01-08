@@ -1,0 +1,19 @@
+---
+import Article from "../../../shared/article/view/Article.svelte";
+import Layout from "../../../shared/layout/view/Layout.astro";
+import WhiteBackground from "../../../shared/white_background/WhiteBackground.svelte";
+import type DefaultProps from "../../../types/DefaultProps";
+import MySkillsSummary from "../components/article/MySkillsSummary.svelte";
+
+export interface Props extends DefaultProps {}
+
+const { title, pathToShow, localization } = Astro.props;
+---
+
+<Layout localization={localization} pathToShow={pathToShow} title={title}>
+    <WhiteBackground>
+        <Article>
+            <MySkillsSummary localization={localization} />
+        </Article>
+    </WhiteBackground>
+</Layout>

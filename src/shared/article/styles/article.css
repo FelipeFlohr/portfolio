@@ -1,0 +1,35 @@
+.article h1 {
+    font-size: calc(1.375rem + 1.5vw);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.article h2 {
+    font-size: calc(1.325rem + .9vw);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.article h3 {
+    font-size: calc(1.3rem + .6vw);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.article h4 {
+    font-size: calc(1.275rem + .3vw);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.article h5 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.article h6 {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
