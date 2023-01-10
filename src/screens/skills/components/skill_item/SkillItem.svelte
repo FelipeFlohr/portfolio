@@ -10,7 +10,7 @@
         <div>
             <img class="max-w-12 h-8" src={tech.imagePath} alt={tech.alternativeAlt ? tech.alternativeAlt : `${tech.name} Logo`}>
         </div>
-        <span>{tech.name}</span>
+        <span class="text-center">{tech.name}</span>
         <div class="flex justify-center items-center">
             {#if tech.stars === 1}
                 <img class={`w-4 h-4 first-star ${tech.whiteForeground ? "invert" : ""}`} src={starSvg} alt="One star">

@@ -10,4 +10,6 @@ export default interface NavbarLocalization {
     readonly myProjectsText: string
     readonly aboutMeText: string
     readonly alsoAvailableInLanguages: string
+    readonly namePortfolioText: string
+    readonly portfolioText: string
 }

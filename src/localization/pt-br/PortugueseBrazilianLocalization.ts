@@ -2,8 +2,8 @@ import type ConsoleLogTitleLocalization from "../../screens/home/components/cons
 import type HeaderLocalization from "../../screens/home/components/header/locale/HeaderLocalization";
 import type NavigationLocalization from "../../screens/home/components/navigation/locale/NavigationLocalization";
 import type MySkillsLocalization from "../../screens/skills/locale/MySkillsLocalization";
-import type NavbarLocalization from "../../shared/layout/components/navbar/locale/NavbarLocalization";
-import type TopbarLocalization from "../../shared/layout/components/topbar/locale/TopbarLocalization";
+import type NavbarLocalization from "../../shared/home_layout/components/navbar/locale/NavbarLocalization";
+import type TopbarLocalization from "../../shared/home_layout/components/topbar/locale/TopbarLocalization";
 import Localization from "../Localization";
 
 export default class PortugueseBrazilianLocalization extends Localization {
@@ -18,7 +18,9 @@ export default class PortugueseBrazilianLocalization extends Localization {
         mySkillsText: "Minhas habilidades",
         myExperienceText: "Minha experiência",
         myProjectsText: "Meus projetos",
-        aboutMeText: "Sobre mim"
+        aboutMeText: "Sobre mim",
+        namePortfolioText: "Felipe Matheus Flohr",
+        portfolioText: "Portifólio",
     }
     
     public override readonly topBarLocalization: TopbarLocalization = {

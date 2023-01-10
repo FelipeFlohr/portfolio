@@ -1,0 +1,19 @@
+---
+import type Localization from "../../../localization/Localization";
+import GridDistribution from "../components/grid_distribution/GridDistribution.svelte";
+import HtmlStructure from "../components/html_structure/HtmlStructure.astro";
+
+export interface Props {
+	readonly title: string;
+    readonly pathToShow: string;
+    readonly localization: Localization;
+}
+
+const { title, pathToShow, localization } = Astro.props;
+---
+
+<HtmlStructure title={title}>
+    <GridDistribution client:visible pageTitle={title} localization={localization} pathToShow={pathToShow}>
+        <slot />
+    </GridDistribution>
+</HtmlStructure>

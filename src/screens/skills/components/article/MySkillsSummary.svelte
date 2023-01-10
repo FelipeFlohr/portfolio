@@ -48,6 +48,12 @@
                     <SkillItem tech={language} />
                 {/each}
             </SkillFrame>
+            <div class="w-full h-14"></div>
+            <SkillFrame header={localization.mySkillsLocalization.backendTechsHeaderText}>
+                {#each techStack.backend as backEnd}
+                    <SkillItem tech={backEnd} />
+                {/each}
+            </SkillFrame>
         </section>
     </article>
 </template>

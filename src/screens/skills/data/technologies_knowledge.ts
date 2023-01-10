@@ -12,6 +12,14 @@ import pyLogo from "../../../assets/techs/python_logo_tech.png"
 import tsLogo from "../../../assets/techs/ts_logo_tech.png"
 import phpLogo from "../../../assets/techs/php_logo_tech.png"
 
+import nodeLogo from "../../../assets/techs/node_logo_tech.png"
+import expressLogo from "../../../assets/techs/express_logo_tech.png"
+import jwtLogo from "../../../assets/techs/jwt_logo_tech.png"
+import nextLogo from "../../../assets/techs/next_logo_tech.png"
+import nestLogo from "../../../assets/techs/nestjs_logo_tech.png"
+import socketIoLogo from "../../../assets/techs/socketio_logo_tech.png"
+import springLogo from "../../../assets/techs/spring_logo_tech.png"
+
 const techStack: TechnologiesStack = {
     languages: [
         {
@@ -90,7 +98,55 @@ const techStack: TechnologiesStack = {
             whiteForeground: true
         },
     ],
-    backend: [],
+    backend: [
+        {
+            imagePath: nodeLogo,
+            name: "Node.js",
+            backgroundColor: "#cfc1c0",
+            stars: 3,
+        },
+        {
+            imagePath: expressLogo,
+            name: "Express.js",
+            backgroundColor: "#FFF",
+            stars: 3,
+        },
+        {
+            imagePath: jwtLogo,
+            name: "JWT",
+            backgroundColor: "#613936",
+            stars: 3,
+            whiteForeground: true,
+            alternativeAlt: "JWT (Json Web Tokens) Logo"
+        },
+        {
+            imagePath: nextLogo,
+            name: "Next.js",
+            backgroundColor: "#FFF",
+            stars: 2,
+        },
+        {
+            imagePath: nestLogo,
+            name: "Nest.js",
+            backgroundColor: "#520505",
+            stars: 2,
+            whiteForeground: true
+        },
+        {
+            imagePath: springLogo,
+            name: "Spring",
+            backgroundColor: "#055206",
+            stars: 2,
+            whiteForeground: true
+        },
+        {
+            imagePath: socketIoLogo,
+            name: "Socket.io",
+            backgroundColor: "#000",
+            stars: 2,
+            whiteForeground: true
+        },
+    ],
     frontend: [],
     misc: [],
     mobile: [],

@@ -1,5 +1,5 @@
 ---
-import Layout from '../../../shared/layout/view/Layout.astro';
+import HomeLayout from '../../../shared/home_layout/view/HomeLayout.astro';
 import type DefaultProps from '../../../types/DefaultProps';
 import FadeBackground from '../components/fade_background/FadeBackground.svelte';
 import Header from '../components/header/Header.svelte';
@@ -10,7 +10,7 @@ export interface Props extends DefaultProps {}
 const { title, pathToShow, localization } = Astro.props;
 ---
 
-<Layout localization={localization} pathToShow={pathToShow} title={title}>
+<HomeLayout localization={localization} pathToShow={pathToShow} title={title}>
     <FadeBackground>
         <div class="w-full h-full flex flex-col justify-center items-center">
             <header class="flex flex-col justify-center items-center my-8">
@@ -19,4 +19,4 @@ const { title, pathToShow, localization } = Astro.props;
             <Navigation client:visible localization={localization} />
         </div>
     </FadeBackground>
-</Layout>
+</HomeLayout>

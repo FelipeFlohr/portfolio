@@ -27,11 +27,11 @@
 <template>
     <!-- Desktop's Navbar -->
     <div class="desktop flex-col w-full h-full text-white border-r-4 border-r-amber-100">
-        <header class="w-full h-72 mt-8 flex flex-col items-center pt-11">
-            <h1 class="text-xl">{localization.navBarLocalization.namePortfolioText}</h1>
-            <h2 class="mt-2 text-lg">{localization.navBarLocalization.portfolioText}</h2>
+        <header class="w-full h-72 flex flex-col items-center pt-11 text-xl">
+            <h1>Felipe Matheus Flohr</h1>
+            <img class="rounded-full border-amber-100 border-4 mt-7 w-5/6" src="/felipe-384.jpg" alt="Felipe Matheus Flohr">
         </header>
-        <hr class="mt-2 mb-6 mx-5">
+        <hr class="mt-10 mx-5">
         <nav class="flex flex-col items-center gap-2 mt-6 mx-5">
             <NavbarLink href={localization.navBarLocalization.homeHref}>{localization.navBarLocalization.homeText}</NavbarLink>
             <NavbarLink href={localization.navBarLocalization.mySkillsHref}>{localization.navBarLocalization.mySkillsText}</NavbarLink>

@@ -1,12 +1,12 @@
 <template>
-    <div class="bg w-full h-full text-white">
+    <div class="bg w-full h-full text-black">
         <slot />
     </div>
 </template>
 
 <style scoped>
     .bg {
-        background: radial-gradient(circle, rgb(29, 28, 28) 0%, rgba(0,0,0,1) 100%);
+        background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(221, 205, 205) 100%);
         animation-name: fade-bg;
         animation-duration: 6000ms;
         animation-timing-function: cubic-bezier();
