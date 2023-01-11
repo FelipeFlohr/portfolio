@@ -60,6 +60,13 @@
                     <SkillItem tech={frontEnd} />
                 {/each}
             </SkillFrame>
+            <div class="w-full h-14"></div>
+            <SkillFrame header={localization.mySkillsLocalization.mobileTechsHeaderText}>
+                {#each techStack.mobile as mobile}
+                    <SkillItem tech={mobile} />
+                {/each}
+            </SkillFrame>
+            <div class="w-full h-14"></div>
         </section>
     </article>
 </template>

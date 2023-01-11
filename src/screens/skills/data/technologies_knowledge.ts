@@ -29,6 +29,8 @@ import tailwindCssLogo from "../../../assets/techs/tailwindcss_logo_tech.png"
 import vueLogo from "../../../assets/techs/vue_logo_tech.png"
 import angularLogo from "../../../assets/techs/angular_logo_tech.png"
 
+import flutterLogo from "../../../assets/techs/flutter_logo_tech.png"
+
 const techStack: TechnologiesStack = {
     languages: [
         {
@@ -215,8 +217,23 @@ const techStack: TechnologiesStack = {
             whiteForeground: true
         }
     ],
+    mobile: [
+        {
+            imagePath: flutterLogo,
+            name: "Flutter",
+            backgroundColor: "#c4f5f4",
+            stars: 3
+        },
+        {
+            imagePath: reactLogo,
+            name: "React Native",
+            backgroundColor: "#424252",
+            stars: 1,
+            isLarge: true,
+            whiteForeground: true
+        }
+    ],
     misc: [],
-    mobile: [],
 }
 
 export default techStack
