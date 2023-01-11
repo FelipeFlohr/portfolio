@@ -7,7 +7,6 @@ import dartLogo from "../../../assets/techs/dart_logo_tech.png"
 import htmlLogo from "../../../assets/techs/html_logo_tech.png"
 import javaLogo from "../../../assets/techs/java_logo_tech.png"
 import jsLogo from "../../../assets/techs/js_logo_tech.png"
-import mdLogo from "../../../assets/techs/markdown_logo_tech.png"
 import pyLogo from "../../../assets/techs/python_logo_tech.png"
 import tsLogo from "../../../assets/techs/ts_logo_tech.png"
 import phpLogo from "../../../assets/techs/php_logo_tech.png"
@@ -19,6 +18,16 @@ import nextLogo from "../../../assets/techs/next_logo_tech.png"
 import nestLogo from "../../../assets/techs/nestjs_logo_tech.png"
 import socketIoLogo from "../../../assets/techs/socketio_logo_tech.png"
 import springLogo from "../../../assets/techs/spring_logo_tech.png"
+
+import bootstrapLogo from "../../../assets/techs/bootstrap_logo_tech.png"
+import reactLogo from "../../../assets/techs/react_logo_tech.png"
+import reactRouterLogo from "../../../assets/techs/react_router_logo_tech.png"
+import reduxLogo from "../../../assets/techs/redux_logo_tech.png"
+import astroLogo from "../../../assets/techs/astrojs_logo_tech.png"
+import svelteLogo from "../../../assets/techs/svelte_logo_tech.png"
+import tailwindCssLogo from "../../../assets/techs/tailwindcss_logo_tech.png"
+import vueLogo from "../../../assets/techs/vue_logo_tech.png"
+import angularLogo from "../../../assets/techs/angular_logo_tech.png"
 
 const techStack: TechnologiesStack = {
     languages: [
@@ -48,12 +57,6 @@ const techStack: TechnologiesStack = {
             stars: 3,
             backgroundColor: "#01366e",
             whiteForeground: true
-        },
-        {
-            imagePath: mdLogo,
-            name: "Markdown",
-            stars: 3,
-            backgroundColor: "#FFF",
         },
         {
             imagePath: dartLogo,
@@ -147,7 +150,71 @@ const techStack: TechnologiesStack = {
             whiteForeground: true
         },
     ],
-    frontend: [],
+    frontend: [
+        {
+            imagePath: reactLogo,
+            name: "React.js",
+            backgroundColor: "#424252",
+            stars: 3,
+            whiteForeground: true
+        },
+        {
+            imagePath: reactRouterLogo,
+            name: "React Router",
+            backgroundColor: "#202024",
+            stars: 3,
+            whiteForeground: true,
+            isLarge: true,
+        },
+        {
+            imagePath: tailwindCssLogo,
+            name: "Tailwind CSS",
+            backgroundColor: "#a7e9f2",
+            stars: 3,
+            isLarge: true
+        },
+        {
+            imagePath: bootstrapLogo,
+            name: "Bootstrap",
+            backgroundColor: "#141433",
+            stars: 3,
+            whiteForeground: true
+        },
+        {
+            imagePath: reduxLogo,
+            name: "Redux",
+            backgroundColor: "#421d47",
+            stars: 2,
+            whiteForeground: true
+        },
+        {
+            imagePath: astroLogo,
+            name: "Astro.js",
+            backgroundColor: "#FFF",
+            stars: 2,
+        },
+        {
+            imagePath: svelteLogo,
+            name: "Svelte",
+            backgroundColor: "#661010",
+            stars: 2,
+            whiteForeground: true
+        },
+        {
+            imagePath: vueLogo,
+            name: "Vue.js",
+            backgroundColor: "#1b292b",
+            stars: 1,
+            whiteForeground: true
+        },
+        {
+            imagePath: angularLogo,
+            name: "Angular",
+            backgroundColor: "#f04853",
+            stars: 1,
+            whiteForeground: true
+        }
+    ],
     misc: [],
     mobile: [],
 }

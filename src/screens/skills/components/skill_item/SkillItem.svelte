@@ -6,7 +6,7 @@
 </script>
 
 <template>
-    <div class={`flex flex-col justify-center items-center w-20 h-24 rounded-md shadow-md transition-transform hover:scale-110 hover:cursor-default ${tech.whiteForeground ? "" : "black-border"}`} style={`background-color: ${tech.backgroundColor}; color: ${tech.whiteForeground ? "#FFF" : "#000"}`}>
+    <div class={`flex flex-col justify-center items-center ${tech.isLarge ? "w-28" : "w-20"} h-24 rounded-md shadow-md transition-transform hover:scale-110 hover:cursor-default ${tech.whiteForeground ? "" : "black-border"}`} style={`background-color: ${tech.backgroundColor}; color: ${tech.whiteForeground ? "#FFF" : "#000"}`}>
         <div>
             <img class="max-w-12 h-8" src={tech.imagePath} alt={tech.alternativeAlt ? tech.alternativeAlt : `${tech.name} Logo`}>
         </div>

@@ -5,6 +5,7 @@ export interface Technology {
     readonly backgroundColor: string
     readonly whiteForeground?: boolean
     readonly alternativeAlt?: string
+    readonly isLarge?: boolean
 }
 
 export interface TechnologiesStack {
