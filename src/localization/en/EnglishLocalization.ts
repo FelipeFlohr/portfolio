@@ -44,9 +44,9 @@ export default class EnglishLocalization extends Localization {
 
     public override readonly mySkillsLocalization: MySkillsLocalization = {
         mySkillsTitleText: "My skills",
-        technologiesSummaryText: `Down below you can check the
+        technologiesSummaryText: `Below, you can check the
 tools/programming languages/technologies in which I have some
-kind of knowledge. Next to them you will find a personal rating
+kind of knowledge. Next to them, you will find a personal rating
 indicating how familiar I am with the technology. The rating
 works like this:`,
         threeStarsText: "(Three stars): real life professional experience.",
