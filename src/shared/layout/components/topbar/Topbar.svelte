@@ -24,7 +24,7 @@
     })
 
     function getUserOs(): "windows" | "linux" {
-        return window.navigator.platform.toLowerCase().includes("windows") ? "windows" : "linux"
+        return window.navigator.platform.toLowerCase().includes("windows") || window.navigator.platform.toLowerCase().includes("win32") ? "windows" : "linux"
     }
 </script>
 
