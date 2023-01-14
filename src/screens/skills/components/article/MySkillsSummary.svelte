@@ -67,6 +67,12 @@
                 {/each}
             </SkillFrame>
             <div class="w-full h-14"></div>
+            <SkillFrame header={localization.mySkillsLocalization.miscKnowledgeHeaderText}>
+                {#each techStack.misc as misc}
+                    <SkillItem tech={misc} />
+                {/each}
+            </SkillFrame>
+            <div class="w-full h-14"></div>
         </section>
     </article>
 </template>

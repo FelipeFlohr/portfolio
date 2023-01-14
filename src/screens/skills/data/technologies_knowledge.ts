@@ -30,6 +30,19 @@ import vueLogo from "../../../assets/techs/vue_logo_tech.png"
 import angularLogo from "../../../assets/techs/angular_logo_tech.png"
 
 import flutterLogo from "../../../assets/techs/flutter_logo_tech.png"
+import androidLogo from "../../../assets/techs/android_logo_tech.png"
+
+import figmaLogo from "../../../assets/techs/figma_logo_tech.png"
+import gulpLogo from "../../../assets/techs/gulp_logo_tech.png"
+import webpackLogo from "../../../assets/techs/webpack_logo_tech.png"
+import dockerLogo from "../../../assets/techs/docker_logo_tech.png"
+import eslintLogo from "../../../assets/techs/eslint_logo_tech.png"
+import jiraLogo from "../../../assets/techs/jira_logo_tech.png"
+import notionLogo from "../../../assets/techs/notion_logo_tech.png"
+import gitLogo from "../../../assets/techs/git_logo_tech.png"
+import githubLogo from "../../../assets/techs/github_logo_tech.png"
+import githubActionsLogo from "../../../assets/techs/github_actions_logo_tech.png"
+import scrumLogo from "../../../assets/techs/scrum_logo_tech.png"
 
 const techStack: TechnologiesStack = {
     languages: [
@@ -231,9 +244,93 @@ const techStack: TechnologiesStack = {
             stars: 1,
             isLarge: true,
             whiteForeground: true
-        }
+        },
+        {
+            imagePath: androidLogo,
+            name: "Android (Native)",
+            backgroundColor: "#184a19",
+            stars: 1,
+            whiteForeground: true,
+            isLarge: true,
+            alternativeAlt: "Android Logo"
+        },
     ],
-    misc: [],
+    misc: [
+        {
+            imagePath: gitLogo,
+            name: "Git",
+            backgroundColor: "#472306",
+            stars: 3,
+            whiteForeground: true
+        },
+        {
+            imagePath: githubLogo,
+            name: "GitHub",
+            backgroundColor: "#474645",
+            stars: 3,
+            whiteForeground: true
+        },
+        {
+            imagePath: githubActionsLogo,
+            name: "GitHub Actions",
+            backgroundColor: "#FFF",
+            stars: 3,
+            isLarge: true
+        },
+        {
+            imagePath: dockerLogo,
+            name: "Docker",
+            backgroundColor: "#ebf3fa",
+            stars: 3,
+        },
+        {
+            imagePath: webpackLogo,
+            name: "Webpack",
+            backgroundColor: "#2f6896",
+            stars: 3,
+            whiteForeground: true
+        },
+        {
+            imagePath: eslintLogo,
+            name: "ESLint",
+            backgroundColor: "#3e5780",
+            stars: 3,
+            whiteForeground: true
+        },
+        {
+            imagePath: notionLogo,
+            name: "Notion",
+            backgroundColor: "#FFF",
+            stars: 3,
+        },
+        {
+            imagePath: jiraLogo,
+            name: "Jira",
+            backgroundColor: "#e1e2e3",
+            stars: 3,
+        },
+        {
+            imagePath: scrumLogo,
+            name: "Scrum",
+            backgroundColor: "#293630",
+            stars: 3,
+            whiteForeground: true
+        },
+        {
+            imagePath: figmaLogo,
+            name: "Figma",
+            backgroundColor: "#3e2a45",
+            stars: 2,
+            whiteForeground: true
+        },
+        {
+            imagePath: gulpLogo,
+            name: "Gulp",
+            backgroundColor: "#470505",
+            stars: 2,
+            whiteForeground: true,
+        },
+    ],
 }
 
 export default techStack
