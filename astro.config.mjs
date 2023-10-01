@@ -1,14 +1,11 @@
-import { defineConfig } from 'astro/config';
-
-// https://astro.build/config
+import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 
-// https://astro.build/config
 import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://portfolio-2flps-24.vercel.app/",
-  integrations: [sitemap(), tailwind(), svelte()]
+	site: "https://felipeflohr.dev/",
+	integrations: [sitemap(), tailwind(), svelte()]
 });

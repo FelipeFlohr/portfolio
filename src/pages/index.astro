@@ -1,9 +1,27 @@
 ---
-import EnglishLocalization from "../localization/en/EnglishLocalization";
-import Home from "../screens/home/view/home.astro";
-import IndexLanding from "../shared/index_landing/view/IndexLanding.svelte";
+import Codetyping from "../components/codetyping/Codetyping.svelte";
+import Layout from "../layout/layout.astro";
 ---
 
-<IndexLanding client:load>
-    <Home localization={new EnglishLocalization()} pathToShow="index.html" title="Home" />
-</IndexLanding>
+<Layout>
+    <div class="w-full h-full flex flex-col justify-center items-center">
+        <h1 class="sm:text-xl md:text-xl lg:text-2xl xl:text-4xl 2xl:text-6xl text-xl">Welcome to:</h1>
+        <div class="flex flex-row">
+            <Codetyping client:load />
+        </div>
+        <div class="absolute bottom-20">
+            <h2>Reach/follow me on:</h2>
+            <div class="flex flex-row justify-center items-center gap-4 mt-2">
+                <a target="_blank" href="https://github.com/FelipeFlohr">
+                    <img src="github-mark-white.png" alt="GitHub" width="24" height="24">
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/felipe-matheus-flohr/">
+                    <img src="In-White-34.png" alt="LinkedIn" width="24" height="24">
+                </a>
+                <a href="mailto:felipeflohrlol@gmail.com">
+                    <img src="email-logo-white.png" alt="E-mail" width="24" height="24">
+                </a>
+            </div>
+        </div>
+    </div>
+</Layout>
